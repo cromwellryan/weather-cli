@@ -18,8 +18,9 @@
   "homepage": "https://github.com/cromwellryan/weather-cli#readme",
   "dependencies": {
     "bluebird": "^3.4.1",
+    "commander": "^2.9.0",
     "external-ip": "^0.2.4",
-    "iplocation": "^2.0.1",
-    "commander": "^2.9.0"
+    "forecast-io": "^1.0.2",
+    "iplocation": "^2.0.1"
   }
 }

@@ -4,6 +4,8 @@
 
 const program = require('commander');
 const Logger = require('./logger');
+const getLocation = require('./location');
+const Weather = require('./weather');
 
 // We should discover these
 const IsItHotOut = require('./questions/isItHotOut');
@@ -13,23 +15,23 @@ program
   .parse(process.argv);
 
 // Get Location
-let location = {};
+getLocation()
+  .then(Weather.getForecast)
+  .then(function(weather) {
 
-// Get weather
-let weather = {};
+    // Report is the thing we'll eventually output somehow
+    let report = {};
 
-// Report is the thing we'll eventually output somehow
-let report = {};
+    // Answer questions
+    let questions = [IsItHotOut];
 
-// Answer questions
-let questions = [IsItHotOut];
+    let answerPromises = questions.map( (question) => {
+      return question
+        .answer(weather)
+        .then( (answer) => report[question.title] = answer.message );
+    });
 
-let answerPromises = questions.map( (question) => {
-  return question
-    .answer(weather)
-    .then( (answer) => report[question.title] = answer.message );
-});
-
-Promise
-  .all(answerPromises)
-  .then( () => console.log(report) );
+    Promise
+      .all(answerPromises)
+      .then( () => console.log(report) );
+  });

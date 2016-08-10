@@ -3,9 +3,11 @@ const ForecastIO = require('forecast-io');
 const forecast = new ForecastIO(process.env.weatherApiKey);
 
 const getForecast = (options) => {
+  console.log(options);
+
   return forecast
     .latitude(options.lat)
-    .longitude(options.long)
+    .longitude(options.lon)
     .time(options.date)
     .units(options.unit)
     .language('en')
@@ -14,4 +16,4 @@ const getForecast = (options) => {
     .get();
 };
 
-export { getForecast };
+module.exports = { getForecast };
