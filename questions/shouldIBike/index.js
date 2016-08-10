@@ -4,11 +4,11 @@ const Promise = require('bluebird');
 
 module.exports = {
   title: 'Should I bike?',
-  answer() {
+  answer(weather) {
     return new Promise(
       (resolve, reject) => {
         const response = {
-          message: 'Always'
+          message: weather.precipType !== 'Rain' ? 'Yes' : 'No'
         };
         resolve(response);
       }
