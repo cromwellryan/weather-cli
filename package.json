@@ -19,6 +19,7 @@
   "dependencies": {
     "bluebird": "^3.4.1",
     "external-ip": "^0.2.4",
-    "iplocation": "^2.0.1"
+    "iplocation": "^2.0.1",
+    "commander": "^2.9.0"
   }
 }
