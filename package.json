@@ -1,0 +1,19 @@
+{
+  "name": "weather-cli",
+  "version": "0.1.0",
+  "description": "Helps you answer questions about what to do with today's weather.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Sadness\"; exit 0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cromwellryan/weather-cli.git"
+  },
+  "author": "Dayton Clean Coders",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/cromwellryan/weather-cli/issues"
+  },
+  "homepage": "https://github.com/cromwellryan/weather-cli#readme"
+}
