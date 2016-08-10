@@ -9,6 +9,7 @@ const Weather = require('./weather');
 
 // We should discover these
 const IsItHotOut = require('./questions/isItHotOut');
+const ShouldIBike =  require('./questions/shouldIBike');
 
 program
   .version('0.0.1')
@@ -23,7 +24,7 @@ getLocation()
     let report = {};
 
     // Answer questions
-    let questions = [IsItHotOut];
+    let questions = [IsItHotOut, ShouldIBike];
 
     let answerPromises = questions.map( (question) => {
       return question
