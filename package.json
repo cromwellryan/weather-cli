@@ -6,6 +6,9 @@
   "scripts": {
     "test": "echo \"Sadness\"; exit 0"
   },
+  "bin": {
+    "weather" : "./index.js"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/cromwellryan/weather-cli.git"
