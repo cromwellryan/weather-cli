@@ -3,8 +3,6 @@ const ForecastIO = require('forecast-io');
 const forecast = new ForecastIO(process.env.weatherApiKey);
 
 const getForecast = (options) => {
-  console.log(options);
-
   return forecast
     .latitude(options.lat)
     .longitude(options.lon)
