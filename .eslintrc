@@ -1,0 +1,16 @@
+{
+  "ecmaFeatures": {
+    "modules": true
+  },
+  "parser": "babel-eslint",
+  "env": {
+    "browser": false,
+    "node": true
+  },
+  "rules": {
+    "semi": [2, "always"],
+    "eqeqeq": [2, "smart"],
+    "no-debugger": 2,
+    "no-cond-assign": [2, "always"]
+  }
+}
